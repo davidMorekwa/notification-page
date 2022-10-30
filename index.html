@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Frontend Mentor | Notifications page</title>
+</head>
+<body>
+
+  <div class="main_container">
+    <div class="heading">
+      <span id="text_notification">Notifications</span>
+      <div id="three">3</div>
+      <span id="text_read">Mark all as read</span>
+    </div>
+    <div id="notification_one" class="notification">
+        <img src="/assets/images/avatar-mark-webber.webp" alt="Mark Weber">
+      <p><span class="prof_name">Mark Webber</span> reacted to your recent post <span class="notification_links">My first tournament today!</span><br>1m ago</p>
+      <span id="dot_one" class="red_dot"></span>      
+    </div>
+    <div id="notification_two" class="notification">
+      <img src="/assets/images/avatar-angela-gray.webp" alt="">     
+      <p><span class="prof_name">Angela Gray</span> followed you <br> 5m ago</p>
+      <div id="dot_two" class="red_dot"></div>
+    </div>
+    <div id="notification_three" class="notification">
+      <img src="/assets/images/avatar-jacob-thompson.webp" alt="">
+      <p><span class="prof_name">Jacob Thompson</span> has joined your group <span class="chess">Chess Club</span> <br> 1 day ago</p>
+      <div id="dot_three" class="red_dot"></div>
+    </div>
+    <div id="notification_four" class="notification">
+      <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="">
+      <p><span class="prof_name">Rizky Hasanuddin</span> sent you a private message <br> 5 days ago</p>
+      <div id="message">
+        <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+      </div>
+    </div>
+    <div id="notification_five" class="notification">
+      <img src="/assets/images/avatar-kimberly-smith.webp" alt="">
+      <p><span class="prof_name">Kimberly Smith</span> commented on your picture <br> 1 week ago</p>
+      <img id="chess_img" src="/assets/images/image-chess.webp" alt="">
+    </div>
+    <div id="notification_six" class="notification">
+      <img src="/assets/images/avatar-nathan-peterson.webp" alt="">
+      <p><span class="prof_name">Nathan Peterson</span> reacted to your recent post <span class="notification_links">5 end-game strategies to increase your win rate</span> <br> 2 weeks ago</p>
+    </div>
+    <div id="notification_seven" class="notification">
+      <img src="/assets/images/avatar-anna-kim.webp" alt="">
+      <p><span class="prof_name">Anna Kim</span > left the group <span class="chess">Chess Club</span> <br> 2 weeks ago</p>
+    </div>
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+    $("#text_read").hover(function(){
+      $("#text_read").css({"color": "hsl(219, 85%, 26%)", "cursor":"pointer"});
+    }, function (){
+      $("#text_read").css("color", "hsl(219, 12%, 42%)");
+    });
+    $("#message").hover(function () {
+      $("#message").css({"background-color": "hsl(211, 68%, 94%)", "cursor":"pointer"})
+        
+      }, function () {
+        $("#message").css("background-color", "white")
+      }
+    );
+    $(".chess").hover(function () {
+        // over
+        $(".chess, ").css("color", "hsl(219, 85%, 26%)");
+      }, function () {
+        // out
+        $(".chess").css("color", "hsl(219, 85%, 26%)");
+      }
+    );
+    $("#chess_img").hover(function () {
+        // over
+        $("#chess_img").css({"border": "2px solid hsl(219, 14%, 63%)", "border-radius": "9px", "cursor":"pointer"});
+      }, function () {
+        // out
+        $("#chess_img").css("border", "none");
+      }
+    );
+    $("#text_read").click(function (e) { 
+      e.preventDefault();
+      $(".red_dot").hide();
+      $(".notification").css("background-color", "white");
+      $("#three").text("0");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+    --font-size: 16px;
+    --font-family: Plus Jakarta Sans;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--Very-light-grayish-blue)
+}
+.main_container{
+    width: 45%;
+    height: auto;
+    border-radius: 12px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    background-color: white;
+}
+.main_container .heading{
+    display: grid;
+    grid-template-columns: 6fr 13fr 10fr;
+    gap: 0px;
+} 
+.main_container .heading #text_notification{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-weight: 800;
+    font-size: 20px;
+}
+.main_container .heading #three{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: relative;
+    font-size: small;
+    color: var(--White);
+    background-color: var(--blue);
+    width: 8%;
+    height: 20px;
+    top: 2px;
+    text-align: center;
+    border-radius: 5px;
+}
+.main_container .heading #text_read{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: right;
+}
+.main_container .notification{
+    display: grid;
+    grid-template-columns: 3fr 15fr;
+    padding: 2px;
+    height: auto;
+    background-color: var(--Very-light-grayish-blue);
+    border-radius: 10px;
+}
+/* .main_container .notification #notification_one{
+    grid-row-start: 2;
+    grid-row-end: 3;
+} */
+.main_container .notification > p{
+    height: 15px;
+    position: relative;
+    top: -10px;
+    font-size: var(--font-size);
+    padding-top: 12px;
+    color: var(--Dark-grayish-blue);
+}
+.main_container .notification img{
+    width: 50%;
+    position: relative;
+    top: 5px;
+    left: 10%;
+}
+.prof_name{
+    color: black;
+    font-weight: 800;
+}
+.prof_name:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+.notification_links{
+    font-weight: 800;
+}
+.notification_links:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+.main_container #notification_five{
+    grid-template-columns: 3.5fr 15fr 3fr;
+}
+#notification_four, #notification_five, #notification_six, #notification_seven{
+    background-color: var(--White);
+}
+#notification_four > div{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border: 1px solid var(--Grayish-blue);
+    padding: 10px;
+    color: var(--Dark-grayish-blue);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.chess{
+    color: var(--blue);
+    font-weight: 800;
+}
+.chess:hover{
+    cursor: pointer;
+}
+.main_container .notification .red_dot{
+    background-color: red;
+    border-radius: 50px;
+    width: 5px;
+    height: 5px;
+    position: relative;
+}
+#dot_one{
+    top: -32px;
+    left: 650px;
+}
+#dot_two{
+    top: -32px;
+    left: 315px;
+}
+#dot_three{
+    top: -32px;
+    left: 510px;
+}
+
+@media(max-width: 375px){
+    .main_container{
+        width: 90%;
+    }
+    .main_container .heading #three{
+        width: 30px;
+        left: 5px;
+    }
+    .main_container .heading #text_read{
+        width: 115px;
+        font-size: small;
+    }
+    .main_container .notification img{
+        width: 70%;
+    }
+    .main_container .notification > p{
+        top: -45%;
+        font-size: small;
+    }
+    #message{
+        font-size: small;
+    }
+    #notification_six{
+        margin-bottom: 15px;
+    }
+    #dot_one{
+        top: -28px;
+        left: 230px;
+    }
+    #dot_two{
+        top: -44px;
+        left: 220px;
+    }
+    #dot_three{
+        top: -29px;
+        left: 130px;
+    }
+}
