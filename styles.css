@@ -40,7 +40,8 @@ body{
     grid-column-start: 1;
     grid-column-end: 2;
     font-weight: 800;
-    font-size: 20px;
+    border: 2px solid red;
+    /* font-size: 20px; */
 }
 .main_container .heading #three{
     grid-column-start: 2;
